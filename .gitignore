@@ -1,6 +1,7 @@
 node_modules/
 yarn.lock
+package-lock.json
+config.json
 build/
 test.jpeg
 *.tgz
-package-lock.json
