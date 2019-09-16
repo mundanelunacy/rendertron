@@ -17,31 +17,32 @@
  * the License.
  */
 
-'use strict';
+"use strict";
 
-import * as fse from 'fs-extra';
-import * as path from 'path';
+import * as fse from "fs-extra";
+import * as path from "path";
 
-const CONFIG_PATH = path.resolve(__dirname, '../config.json');
-
+const CONFIG_PATH = path.resolve(__dirname, "../config.json");
 
 export type Config = {
-    cache: 'datastore'|'memory'|null;
+    cache: "datastore" | "memory" | null;
     timeout: number;
     port: string;
     width: number;
     height: number;
-    headers: {[key: string]: string};
+    headers: { [key: string]: string };
+    whiteList: string[];
 };
 
 export class ConfigManager {
     public static config: Config = {
         cache: null,
         timeout: 10000,
-        port: '3000',
+        port: "3000",
         width: 1000,
         height: 1000,
-        headers: {}
+        headers: {},
+        whiteList: []
     };
 
     static async getConfiguration(): Promise<Config> {
@@ -52,4 +53,3 @@ export class ConfigManager {
         return ConfigManager.config;
     }
 }
-
