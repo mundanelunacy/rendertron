@@ -194,7 +194,7 @@ root. Available configuration options:
 -   `width` default `1000` - set the width (resolution) to be used for rendering the page.
 -   `height` default `1000` - set the height (resolution) to be used for rendering the page.
 -   `cache` default `null` - set to `datastore` to enable caching on Google Cloud using datastore or to `memory` to enable in-memory caching
--   `whiteList` default `[]` - sets domains to whitelist e.g. ['slashdot.org', 'google.com']
+-   `whiteList` default `[]` - sets domains to whitelist e.g. ['slashdot.org', 'google.com']; `[]` whitelists all
 
 ### Troubleshooting
 
