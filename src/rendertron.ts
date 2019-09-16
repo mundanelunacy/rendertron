@@ -71,15 +71,11 @@ export class Rendertron {
         const host = parsedUrl.host || "";
         const whiteList = this.config.whiteList;
 
-        // console.log(`input host: ${parsedUrl.host}`);
-        // console.log("whitelist:");
-        // console.log(this.config.whiteList);
-
-        if (!protocol.match(/^https?/) && (whiteList.length === 0 || whiteList.includes(host))) {
-            return true;
+        if (protocol.match(/^https?/) && (whiteList.length === 0 || whiteList.includes(host))) {
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     async handleRenderRequest(ctx: Koa.Context, url: string) {
