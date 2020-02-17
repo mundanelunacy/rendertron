@@ -1,1 +1,1 @@
-{ "datastoreCache": true, "whiteList": ["know.vc", "experiential-dev.firebaseapp.com"] }
+{ "cache": "datastore", "whiteList": ["know.vc", "experiential-dev.firebaseapp.com"] }
